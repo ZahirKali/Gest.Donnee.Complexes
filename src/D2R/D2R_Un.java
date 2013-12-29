@@ -1,3 +1,4 @@
+package D2R;
 import java.io.FileNotFoundException;
 
 import com.hp.hpl.jena.query.Query;
@@ -31,7 +32,7 @@ public class D2R_Un
         String l = "PREFIX l: <"+loc+">" ;
         String i = "PREFIX i: <"+imp+">" ;
                 
-//1 Donner les noms des communes et de leurs departements d’appartenance
+//1 Donner les noms des communes et de leurs departements dâ€™appartenance
          String queryString = c	 +NL+ d+NL+
                  "SELECT ?nomcommune ?nomDep " 
                  + "WHERE {?c c:nccC ?nomcommune ."
@@ -49,7 +50,7 @@ public class D2R_Un
         
         
         
-//3 Donner le nombre de communes par d ́epartement
+//3 Donner le nombre de communes par d Ì�epartement
 //       String queryString2 = c +NL+d+NL+
 //                 "SELECT ?nomDep (COUNT(?nomcommune) as ?NbbCommune) "
 //                 +"WHERE {?c c:nccC ?nomcommune ."
@@ -74,8 +75,8 @@ public class D2R_Un
                  +"FILTER (?Cheflieu=\"4\") }";
         
         
-// 5 Donner le nom des localit´es soumises `a l’ISF ainsi que le nom de leur d´epartement et de leur r´egion
-         // d’appartenance
+// 5 Donner le nom des localitÂ´es soumises `a lâ€™ISF ainsi que le nom de leur dÂ´epartement et de leur rÂ´egion
+         // dâ€™appartenance
         String queryString9 = c+ NL+ d+NL+ r +NL+ l+ i+ NL+
                 "SELECT ?commune ?dep ?region "
                 +"WHERE {?c c:nccC ?commune ." 
@@ -95,7 +96,7 @@ public class D2R_Un
                 +"?imp i:impotDansArrond ?a ."
                 +"?a c:arrondissementDansLoc ?imp .}"  ; 
 
- //6 Donner les localit soumises `a l’ISF
+ //6 Donner les localit soumises `a lâ€™ISF
        
          String queryString4 = l +NL+
                  "SELECT ?localite "
@@ -103,7 +104,7 @@ public class D2R_Un
          
          
          
- //7 Donner l'impot moyen par localité soumis a l'isf  
+ //7 Donner l'impot moyen par localitÃ© soumis a l'isf  
          String queryString5 = l + NL + i +NL+
                  "SELECT ?localite ?impoM "
                  +"WHERE {?l l:codeinseeL ?localite ."
