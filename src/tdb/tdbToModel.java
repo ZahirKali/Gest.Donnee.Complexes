@@ -34,9 +34,15 @@ public class tdbToModel {
 	}
 	
 	private void CreateOrReadTdbModel(){
+<<<<<<< HEAD
 			final String rdf_file_dep = "/home/sosso/GIT/Gest.Donnee.Complexes/resources/tdb/departement.rdf";
 			final String rdf_file_reg = "/home/sosso/GIT/Gest.Donnee.Complexes/resources/tdb/region.rdf";
 //			final String rdf_file_geoname = "/home/sosso/GIT/Gest.Donnee.Complexes/resources/tdb/geonames_v3.rdf";
+=======
+			final String rdf_file_dep = "file:///D:/GIT/Gest.Donnee.Complexes/resources/tdb/departement.rdf";
+			final String rdf_file_reg = "file:///D:/GIT/Gest.Donnee.Complexes/resources/tdb/region.rdf";
+//			final String rdf_file_geoname = "file:///D:/GIT/Gest.Donnee.Complexes/resources/tdb/geonames_v3.rdf";
+>>>>>>> e72e23e1242bfd95025eed3249a571fd45ceb049
 			
 			String directory = "D:/GIT/Gest.Donnee.Complexes/src/tdb/model";
 			ds = TDBFactory.createDataset(directory) ;
