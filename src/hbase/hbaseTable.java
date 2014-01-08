@@ -15,6 +15,7 @@ import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.MasterNotRunningException;
 import org.apache.hadoop.hbase.ZooKeeperConnectionException;
+import org.apache.hadoop.hbase.avro.generated.HBase;
 import org.apache.hadoop.hbase.client.Delete;
 import org.apache.hadoop.hbase.client.Get;
 import org.apache.hadoop.hbase.client.HBaseAdmin;
@@ -27,6 +28,10 @@ import org.apache.hadoop.hbase.util.Bytes;
 
 public class hbaseTable {
 	private static HTable candidatTable;
+	private final String partie01 = "/home/sosso/GIT/Gest.Donnee.Complexes/resources/hbase/partie01.txt";
+	private final String partie02 = "/home/sosso/GIT/Gest.Donnee.Complexes/resources/hbase/partie02.txt";
+	private static boolean areFilesLoaded = false;
+	
 	
 	public static HTable getTable(){
 		return candidatTable;
@@ -81,7 +86,7 @@ public class hbaseTable {
     /**
      * Put (or insert) a row
      */
-    public static void addRecord(String tableName, String rowKey, String family, String column, String value) throws Exception {
+    public static void  addRecord(String tableName, String rowKey, String family, String column, String value) throws Exception {
        try {
 		HTable table = new HTable(conf, tableName);
 		Put put = new Put(Bytes.toBytes(rowKey));
@@ -146,68 +151,62 @@ public class hbaseTable {
         }
     }
 	
-	public void createCandidateTable() throws Exception {
+	public void createCandidateTable() {
 		String[] familys = {"numTour","infoLocalisation","infoElecteurs","infoCandidat"};
-		creatTable("candidat", familys);
+		try {
+			creatTable("candidat", familys);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void load(){
-		String partie01 = "/home/sosso/GIT/Gest.Donnee.Complexes/resources/hbase/partie01.txt";
-		String partie02 = "/home/sosso/GIT/Gest.Donnee.Complexes/resources/hbase/partie02.txt";
+		loadFile(partie01, "candidat");
+		loadFile(partie02, "candidat");
+	}
+	
+	private void loadFile(String file, String tableName){
 		
 		try{
-			InputStream ips=new FileInputStream(partie01); 
+			candidatTable = new HTable(conf, tableName);
+			InputStream ips=new FileInputStream(file); 
 			InputStreamReader ipsr=new InputStreamReader(ips);
 			BufferedReader br=new BufferedReader(ipsr);
 			String ligne;
-			while ((ligne=br.readLine())!=null){
+			int counter = 0;
+			while ((ligne=br.readLine())!=null){ 
 				String[] arr = ligne.split(";");
 				Put put = new Put(arr[1].getBytes());
-				put.add("numTour".getBytes(), "N° tour".getBytes(), Bytes.toBytes(arr[0]));
-				put.add("infoLocalisation".getBytes(), "Code département".getBytes(), Bytes.toBytes(arr[1]));
+				put.add("numTour".getBytes(), "N tour".getBytes(), Bytes.toBytes(arr[0]));
+				put.add("infoLocalisation".getBytes(), "Code departement".getBytes(), Bytes.toBytes(arr[1]));
 				put.add("infoLocalisation".getBytes(), "Code de la commune".getBytes(), Bytes.toBytes(arr[2]));
 				put.add("infoLocalisation".getBytes(), "Nom de la commune".getBytes(), Bytes.toBytes(arr[3]));
-				put.add("infoLocalisation".getBytes(), "N° de circonscription Lg".getBytes(), Bytes.toBytes(arr[4]));
-				put.add("infoLocalisation".getBytes(), "N° de canton".getBytes(), Bytes.toBytes(arr[5]));
-				put.add("infoLocalisation".getBytes(), "N° de bureau de vote".getBytes(), Bytes.toBytes(arr[6]));
+				put.add("infoLocalisation".getBytes(), "N de circonscription Lg".getBytes(), Bytes.toBytes(arr[4]));
+				put.add("infoLocalisation".getBytes(), "N de canton".getBytes(), Bytes.toBytes(arr[5]));
+				put.add("infoLocalisation".getBytes(), "N de bureau de vote".getBytes(), Bytes.toBytes(arr[6]));
 				
 				put.add("infoElecteurs".getBytes(), "Inscrits".getBytes(), Bytes.toBytes(arr[7]));
 				put.add("infoElecteurs".getBytes(), "Votants".getBytes(), Bytes.toBytes(arr[8]));
-				put.add("infoElecteurs".getBytes(), "Exprimés".getBytes(), Bytes.toBytes(arr[9]));
+				put.add("infoElecteurs".getBytes(), "Exprimes".getBytes(), Bytes.toBytes(arr[9]));
 				
-				put.add("infoCandidat".getBytes(), "N° de dépôt du candidat".getBytes(), Bytes.toBytes(arr[10]));
+				put.add("infoCandidat".getBytes(), "N de depot du candidat".getBytes(), Bytes.toBytes(arr[10]));
 				put.add("infoCandidat".getBytes(), "Nom du candidat".getBytes(), Bytes.toBytes(arr[11]));
-				put.add("infoCandidat".getBytes(), "Prénom du candidat".getBytes(), Bytes.toBytes(arr[12]));
+				put.add("infoCandidat".getBytes(), "Prenom du candidat".getBytes(), Bytes.toBytes(arr[12]));
 				put.add("infoCandidat".getBytes(), "Code nuance du candidat".getBytes(), Bytes.toBytes(arr[13]));
 				put.add("infoCandidat".getBytes(), "Nombre de voix du candidat".getBytes(), Bytes.toBytes(arr[14]));
+				
+				candidatTable.put(put);				
+				counter += 1;
+				if (counter % 10000 == 0) {
+					System.out.println("Imported "+counter+" records");
+				}
 			}
+			
 			br.close(); 
 		}		
 		catch (Exception e){
 			System.out.println(e.toString());
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 }
