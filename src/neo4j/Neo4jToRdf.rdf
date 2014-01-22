@@ -1,0 +1,88 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:taxe-foncier="http://www.taxe-foncier.com#" > 
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#BOURGOGNE">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#3,65"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#1 552 084 680"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#BRETAGNE">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#2,97"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#2 823 263 276"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#LIMOUSIN">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#4,10"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#689 185 081"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#AQUITAINE">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#3,17"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#3 203 377 570"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#BASSE_NORMANDIE">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#3,17"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#1 289 602 827"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#FRANCHE_COMTE">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#3,92"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#1 072 564 789"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#PICARDIE">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#4,26"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#1 540 503 620"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#CENTRE">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#3,47"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#2 289 668 205"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#ILE_DE_FRANCE">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#1,27"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#21 197 652 584"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#POITOU_CHARENTES">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#3,32"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#1 521 199 183"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#RHONE_ALPES">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#2,12"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#7 396 610 646"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#PROVENCE_ALPES_COTE_D_AZUR">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#2,36"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#6 129 538 058"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#HAUTE_NORMANDIE">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#4,42"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#1 651 522 593"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#LANGUEDOC_ROUSSILLON">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#4,86"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#2 691 245 822"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#PAYS_DE_LA_LOIRE">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#2,66"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#3 103 305 386"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#LORRAINE">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#2,73"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#2 132 022 588"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#NORD_PAS_DE_CALAIS">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#3,83"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#2 931 855 359"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#MIDI_PYRENEES">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#4,72"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#2 780 934 460"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#AUVERGNE">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#5,29"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#1 237 218 606"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#ALSACE">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#2,01"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#1 948 196 507"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#CHAMPAGNE_ARDENNE">
+    <taxe-foncier:Taux rdf:resource="http://www.taxe-foncier.com#3,63"/>
+    <taxe-foncier:Basenette rdf:resource="http://www.taxe-foncier.com#1 153 211 196"/>
+  </rdf:Description>
+</rdf:RDF>
