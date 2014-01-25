@@ -1,0 +1,224 @@
+@prefix map: <file:f.n3#> .
+@prefix db: <> .
+@prefix v: <http://www.lirmm.fr/region#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "oracle.jdbc.driver.OracleDriver";
+	d2rq:jdbcDSN "jdbc:oracle:thin:@venus:1521:master";
+	d2rq:username "oouzizi";
+	d2rq:password "oouzizi";
+	.
+
+# Table cog
+map:Cog a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "http://www.lirmm.fr/v#@@COG.CDC@@";
+	d2rq:class v:cog;
+	.
+
+map:cdc a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Cog;
+	d2rq:property v:cdc;
+	d2rq:column "COG.CDC";
+	d2rq:datatype xsd:string;
+	.
+
+
+map:codeRegC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Cog;
+	d2rq:property v:codeReg;
+	d2rq:column "COG.CODEREG";
+	d2rq:datatype xsd:string;
+	.
+
+map:cl a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Cog;
+	d2rq:property v:cl;
+	d2rq:column "COG.CL";
+	d2rq:datatype xsd:string;
+	.
+
+map:ct a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Cog;
+	d2rq:property v:ct;
+	d2rq:column "COG.CT";
+	d2rq:datatype xsd:string;
+	.		
+
+map:codeDepC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Cog;
+	d2rq:property v:codeDep;
+	d2rq:column "COG.CODEDEP";
+	d2rq:datatype xsd:string;
+	.
+
+map:codeCommune a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Cog;
+	d2rq:property v:codeCommune;
+	d2rq:column "COG.CODECOMMUNE";
+	d2rq:datatype xsd:string;
+	.
+
+map:ar a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Cog;
+	d2rq:property v:ar;
+	d2rq:column "COG.AR";
+	d2rq:datatype xsd:string;
+	.
+	
+map:ar a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Cog;
+	d2rq:property v:ar;
+	d2rq:column "COG.AR";
+	d2rq:datatype xsd:string;
+	.
+	
+map:artmaj a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Cog;
+	d2rq:property v:artmaj;
+	d2rq:column "COG.ARTMAJ";
+	d2rq:datatype xsd:string;
+	.
+	
+map:tnccC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Cog;
+	d2rq:property v:tncC;
+	d2rq:column "COG.TNCC";
+	d2rq:datatype xsd:string;
+	.
+
+map:nccC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Cog;
+	d2rq:property v:nccC;
+	d2rq:column "COG.NCC";
+	d2rq:datatype xsd:string;
+	.
+
+map:nccenrC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Cog;
+	d2rq:property v:nccenrC;
+	d2rq:column "COG.NCCENR";
+	d2rq:datatype xsd:string;
+	.
+
+# Table Region
+map:Region a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "http://www.lirmm.fr/v#@@REGION.REGION@@";
+	d2rq:class v:Region;
+	.
+
+map:regionR a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Region;
+	d2rq:property v:region;
+	d2rq:column "REGION.REGION";
+	d2rq:datatype xsd:string;
+	.
+
+map:chiefLieuR a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Region;
+	d2rq:property v:chiefLieu;
+	d2rq:column "REGION.CHEFLIEU";
+	d2rq:datatype xsd:string;
+	.
+	
+map:tnccR a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Region;
+	d2rq:property v:tncc;
+	d2rq:column "REGION.TNCC";
+	d2rq:datatype xsd:string;
+	.
+
+map:nccR a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Region;
+	d2rq:property v:nccD;
+	d2rq:column "REGION.NCC";
+	d2rq:datatype xsd:string;
+	.
+
+map:nccenrR a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Region;
+	d2rq:property v:nccD;
+	d2rq:column "REGION.NCCENR";
+	d2rq:datatype xsd:string;
+	.
+
+
+# Table Departement
+map:Departement a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "http://www.lirmm.fr/v#@@DEPARTEMENT.DEPARTEMENT@@";
+	d2rq:class v:Departement;
+	.
+
+map:regionD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Departement;
+	d2rq:property v:region;
+	d2rq:column "DEPARTEMENT.REGION";
+	d2rq:datatype xsd:string;
+	.
+
+map:departement a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Departement;
+	d2rq:property v:departement;
+	d2rq:column "DEPARTEMENT.DEPARTEMENT";
+	d2rq:datatype xsd:string;
+	.
+
+map:chiefLieuD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Departement;
+	d2rq:property v:chiefLieu;
+	d2rq:column "DEPARTEMENT.CHEFLIEU";
+	d2rq:datatype xsd:string;
+	.
+	
+map:tnccD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Departement;
+	d2rq:property v:tncc;
+	d2rq:column "DEPARTEMENT.TNCC";
+	d2rq:datatype xsd:string;
+	.
+
+map:nccD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Departement;
+	d2rq:property v:nccD;
+	d2rq:column "DEPARTEMENT.NCC";
+	d2rq:datatype xsd:string;
+	.
+
+map:nccenrD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Departement;
+	d2rq:property v:nccD;
+	d2rq:column "DEPARTEMENT.NCCENR";
+	d2rq:datatype xsd:string;
+	.
+
+#jointure entre commune et departement
+map:dep_mes_commune a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:COMMUNE;
+	d2rq:property c:dep_mes_commune;
+	d2rq:refersToClassMap map:departement;
+	d2rq:join "COG_R.CODEDEP=DEPARTEMENT.DEPARTEMENT.";
+	.
+
+#jointure entre departement et region
+map:region_mes_departement a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:DEPARTEMENT;
+	d2rq:property d:region_mes_departement;
+	d2rq:refersToClassMap map:region;
+	d2rq:join "DEPARTEMENT.REGION=REGION.REGION";
+	.
+
+#joiture entre commune et region
+map:region_mes_commune a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:COMMUNE;
+	d2rq:property c:region_mes_commune;
+	d2rq:refersToClassMap map:commune;
+	d2rq:join "COG_R.CODEREG=REGION.REGION";
+
+
+	.
