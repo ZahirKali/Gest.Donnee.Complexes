@@ -1,4 +1,4 @@
-package d2rqProjet;
+package D2RQ.d2rqProjet;
 
 import java.io.FileNotFoundException;
 
