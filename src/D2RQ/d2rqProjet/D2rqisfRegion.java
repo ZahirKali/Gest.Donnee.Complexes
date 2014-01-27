@@ -30,9 +30,9 @@ public class D2rqisfRegion {
 	        
 	       
 	         String queryString = r	 + NL + 
-	                 "SELECT DISTINCT ?nomregion  ?isfregion "
+	                 "SELECT ?nomregion  ?isfregion "
 	         		+ "WHERE {?n r:nomRegion ?nomregion ." 
-	         		+ "?i r:isfmoyenRegion ?isfregion }";
+	         		+ "?n r:isfmoyenRegion ?isfregion }";
 	         		
 	        
 	        
