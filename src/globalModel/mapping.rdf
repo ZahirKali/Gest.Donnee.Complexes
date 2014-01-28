@@ -102,7 +102,7 @@
     <!-- Ajout Séb -->
     
     <owl:Class rdf:about="http://rdf.insee.fr/geo/Departement">
-        <owl:sameAs rdf:resource="http://localhost:9000/hbase#infoLocalisationCode_departement"/>
+        <owl:sameAs rdf:resource="http://localhost:9000/hbase#"/>
     </owl:Class>
       
 </rdf:RDF>

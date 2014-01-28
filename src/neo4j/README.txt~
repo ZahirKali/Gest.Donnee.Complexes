@@ -1,0 +1,12 @@
+
+NEO4J
+
+Il faut faire appel à la librairie jena/ et Neo4j
+
+Dans le package 
+
+-> Main.java
+-> NeoCreateGraph.java
+-> RelType.java
+
+Executer le programme via le fichier main

@@ -33,7 +33,7 @@ public class D2RQUtils {
          String queryString = r +
                  "Select * where {?s ?o ?p }";
          
-		d2rqModel = new ModelD2RQ("file:/home/sosso/GIT/Gest.Donnee.Complexes/src/D2RQ/d2rqProjet/mappingRegion.n3");
+		d2rqModel = new ModelD2RQ("file:/home/sosso/GIT/Gest.Donnee.Complexes/src/D2R/mappingRegion.n3");
 		runQuery(queryString);
 	}
 	
