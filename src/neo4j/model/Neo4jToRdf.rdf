@@ -1,0 +1,109 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:taxe="http://www.taxe-foncier.com#" > 
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#BOURGOGNE">
+    <taxe:Taux>3,65</taxe:Taux>
+    <taxe:Basenette>1 552 084 680</taxe:Basenette>
+    <taxe:Name>BOURGOGNE</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#BRETAGNE">
+    <taxe:Taux>2,97</taxe:Taux>
+    <taxe:Basenette>2 823 263 276</taxe:Basenette>
+    <taxe:Name>BRETAGNE</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#LIMOUSIN">
+    <taxe:Taux>4,10</taxe:Taux>
+    <taxe:Basenette>689 185 081</taxe:Basenette>
+    <taxe:Name>LIMOUSIN</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#AQUITAINE">
+    <taxe:Taux>3,17</taxe:Taux>
+    <taxe:Basenette>3 203 377 570</taxe:Basenette>
+    <taxe:Name>AQUITAINE</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#BASSE_NORMANDIE">
+    <taxe:Taux>3,17</taxe:Taux>
+    <taxe:Basenette>1 289 602 827</taxe:Basenette>
+    <taxe:Name>BASSE_NORMANDIE</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#FRANCHE_COMTE">
+    <taxe:Taux>3,92</taxe:Taux>
+    <taxe:Basenette>1 072 564 789</taxe:Basenette>
+    <taxe:Name>FRANCHE_COMTE</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#PICARDIE">
+    <taxe:Taux>4,26</taxe:Taux>
+    <taxe:Basenette>1 540 503 620</taxe:Basenette>
+    <taxe:Name>PICARDIE</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#CENTRE">
+    <taxe:Taux>3,47</taxe:Taux>
+    <taxe:Basenette>2 289 668 205</taxe:Basenette>
+    <taxe:Name>CENTRE</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#ILE_DE_FRANCE">
+    <taxe:Taux>1,27</taxe:Taux>
+    <taxe:Basenette>21 197 652 584</taxe:Basenette>
+    <taxe:Name>ILE_DE_FRANCE</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#POITOU_CHARENTES">
+    <taxe:Taux>3,32</taxe:Taux>
+    <taxe:Basenette>1 521 199 183</taxe:Basenette>
+    <taxe:Name>POITOU_CHARENTES</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#RHONE_ALPES">
+    <taxe:Taux>2,12</taxe:Taux>
+    <taxe:Basenette>7 396 610 646</taxe:Basenette>
+    <taxe:Name>RHONE_ALPES</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#PROVENCE_ALPES_COTE_D_AZUR">
+    <taxe:Taux>2,36</taxe:Taux>
+    <taxe:Basenette>6 129 538 058</taxe:Basenette>
+    <taxe:Name>PROVENCE_ALPES_COTE_D_AZUR</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#HAUTE_NORMANDIE">
+    <taxe:Taux>4,42</taxe:Taux>
+    <taxe:Basenette>1 651 522 593</taxe:Basenette>
+    <taxe:Name>HAUTE_NORMANDIE</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#LANGUEDOC_ROUSSILLON">
+    <taxe:Taux>4,86</taxe:Taux>
+    <taxe:Basenette>2 691 245 822</taxe:Basenette>
+    <taxe:Name>LANGUEDOC_ROUSSILLON</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#PAYS_DE_LA_LOIRE">
+    <taxe:Taux>2,66</taxe:Taux>
+    <taxe:Basenette>3 103 305 386</taxe:Basenette>
+    <taxe:Name>PAYS_DE_LA_LOIRE</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#LORRAINE">
+    <taxe:Taux>2,73</taxe:Taux>
+    <taxe:Basenette>2 132 022 588</taxe:Basenette>
+    <taxe:Name>LORRAINE</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#NORD_PAS_DE_CALAIS">
+    <taxe:Taux>3,83</taxe:Taux>
+    <taxe:Basenette>2 931 855 359</taxe:Basenette>
+    <taxe:Name>NORD_PAS_DE_CALAIS</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#MIDI_PYRENEES">
+    <taxe:Taux>4,72</taxe:Taux>
+    <taxe:Basenette>2 780 934 460</taxe:Basenette>
+    <taxe:Name>MIDI_PYRENEES</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#AUVERGNE">
+    <taxe:Taux>5,29</taxe:Taux>
+    <taxe:Basenette>1 237 218 606</taxe:Basenette>
+    <taxe:Name>AUVERGNE</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#ALSACE">
+    <taxe:Taux>2,01</taxe:Taux>
+    <taxe:Basenette>1 948 196 507</taxe:Basenette>
+    <taxe:Name>ALSACE</taxe:Name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.taxe-foncier.com#CHAMPAGNE_ARDENNE">
+    <taxe:Taux>3,63</taxe:Taux>
+    <taxe:Basenette>1 153 211 196</taxe:Basenette>
+    <taxe:Name>CHAMPAGNE_ARDENNE</taxe:Name>
+  </rdf:Description>
+</rdf:RDF>

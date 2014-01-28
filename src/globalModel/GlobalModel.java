@@ -18,10 +18,9 @@ public class GlobalModel {
 	private static GlobalModel instance;
 	private static Model GModel;
 	
-	private GlobalModel(){
+	public GlobalModel(){
 		TDBUtils tdb = new TDBUtils();
 		HBaseUtils hb = new HBaseUtils();
-		hb.ToHBModel("candidat");
 		CreateModel(HBaseModel.getInstance(), TDBModel.getInstance());
 	}
 

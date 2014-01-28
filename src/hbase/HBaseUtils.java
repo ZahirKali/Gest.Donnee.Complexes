@@ -41,7 +41,11 @@ public class HBaseUtils {
         private static Configuration conf;
         private static HTable candidateTable ;
         private static HBaseModel HBModel;
-        private final String partie01 = "/home/sosso/GIT/Gest.Donnee.Complexes/resources/hbase/partie01.txt";
+        public static HBaseModel getHBModel() {
+			return HBModel;
+		}
+
+		private final String partie01 = "/home/sosso/GIT/Gest.Donnee.Complexes/resources/hbase/partie01.txt";
         private final String partie02 = "/home/sosso/GIT/Gest.Donnee.Complexes/resources/hbase/partie02.txt";
         private final String partie03 = "/home/sosso/GIT/Gest.Donnee.Complexes/resources/hbase/partie03.txt";    	
 		
@@ -279,6 +283,7 @@ public class HBaseUtils {
         }
         
         public void runQuery(String query){
+        	System.out.println("Quering HBase Model ....");
  		   Query q = QueryFactory.create(query) ;
 		    QueryExecution qexec = QueryExecutionFactory.create(query, HBModel.getHbaseModel()) ;
 		    ResultSet results = qexec.execSelect() ;
